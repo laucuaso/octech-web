@@ -2,7 +2,7 @@ var express = require('express');
 var http = require('http');
 var app = express();
 
-app.set('port', 8088);
+app.set('port', 8080);
 app.set('view engine', 'jade');
 app.use('views', express.static(__dirname +' /views'));
 app.use('/img', express.static(__dirname + '/public/img'));
