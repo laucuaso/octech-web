@@ -1,0 +1,27 @@
+{
+  "name": "octech.com.vn",
+  "version": "1.0.0",
+  "description": "octech website",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.1",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laucuaso/octech-web.git"
+  },
+  "keywords": [
+    "octech"
+  ],
+  "author": "tuyennguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laucuaso/octech-web/issues"
+  },
+  "homepage": "https://github.com/laucuaso/octech-web#readme"
+}
