@@ -2,7 +2,8 @@ var express = require('express');
 var http = require('http');
 var app = express();
 
-app.set('port', 8080);
+app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080);
+app.set ('ip',process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0');
 app.set('view engine', 'jade');
 app.use('views', express.static(__dirname +' /views'));
 app.use('/img', express.static(__dirname + '/public/img'));
