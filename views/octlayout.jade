@@ -1,0 +1,136 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title OCTECH - 
+      block title
+    link(rel='icon', type='image/png', href='/img/icon.png')
+    link(rel='stylesheet', href='/styles.css', type='text/css')
+    //if lt IE 9
+      script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+    meta(name='viewport', content='width=device-width, minimum-scale=1.0, maximum-scale=1.0')
+  body
+    #container
+      header
+        .width
+          h1
+            a(href='/trang-chu') octech
+      nav
+        .width
+          ul
+            li(class="#{cat == 'trang-chu'? 'selected':''}")
+              a(href='/trang-chu') Trang chủ
+            li(class="#{cat == 'gioi-thieu'? 'selected':''}")
+              a(href='/gioi-thieu') Giới thiệu
+            li(class="#{cat == 'san-pham'? 'selected':''}")
+              a(href='/san-pham') Sản phẩm
+            li(class="#{cat == 'dich-vu'? 'selected':''}")
+              a(href='/dich-vu') Dịch vụ
+            li(class="#{cat == 'lien-he'? 'selected':''}").end
+              a(href='/lien-he') Liên hệ
+      #body.width
+        section#content.two-column
+          block content
+        aside.sidebar.big-sidebar.right-sidebar
+          ul
+            li
+              -if(cat == 'san-pham'){
+              h4 Sản phẩm
+              ul.blocklist
+                li
+                  a(href='/san-pham/gateway' class="#{item == 'gateway'? 'selected':''}") Gateway
+                li
+                  a(href='/san-pham/ors' class="#{item == 'ors'? 'selected':''}") Order Routing System
+                li
+                  a(href='/san-pham/home-trading' class="#{item == 'home-trading'? 'selected':''}") Home Trading System
+                li
+                  a(href='/san-pham/back-office' class="#{item == 'back-office'? 'selected':''}") Back Office
+              -} else {
+              h4 Danh mục
+              ul.blocklist
+                li
+                  a(href='/trang-chu' class="#{cat == 'trang-chu'? 'selected':''}") Trang chủ
+                li
+                  a(href='/gioi-thieu' class="#{cat == 'gioi-thieu'? 'selected':''}") Giới thiệu
+                li
+                  a(href='/san-pham' class="#{cat == 'san-pham'? 'selected':''}") Sản phẩm
+                li
+                  a(href='/dich-vu' class="#{cat == 'dich-vu'? 'selected':''}") Dịch vụ
+                li
+                  a(href='/lien-he' class="#{cat == 'lien-he'? 'selected':''}") Liên hệ
+                li
+                  a(href='/lanh-dao' class="#{cat == 'lanh-dao'? 'selected':''}") Ban lãnh đạo
+                li
+                  a(href='/why-us' class="#{cat == 'why-us'? 'selected':''}") Tại sao chọn OCTECH
+              -}
+            li
+              h4 Tin tức
+              ul.newslist
+                li
+                  p
+                    span.newslist-date Ngày 14 tháng 6
+                    |  OCTECH tích hợp thành công hệ thống ORS với VNDirect.
+                li
+                  p
+                    span.newslist-date Ngày 23 tháng 4
+                    |  OCTECH Gateway giúp lệnh của Agribank khớp đầu tiên tại HOSE.
+                li
+                  p
+                    span.newslist-date Ngày 27 tháng 3
+                    |  OCTECH Gateway được công nhận là một ISV của thị trường chứng khoán Việt Nam.
+        .clear
+      footer
+        .footer-content.width
+          ul
+            li
+              h4 Sản phẩm
+            li
+              a(href='/san-pham/gateway') Gateway
+            li
+              a(href='/san-pham/ors') Order Routing System
+            li
+              a(href='/san-pham/home-trading') Home Trading
+            li
+              a(href='/san-pham/back-office') Back Office solutions
+          ul
+            li
+              h4 Dịch vụ
+            li
+              a(href='/dich-vu') Cung cấp phần mềm đóng gói
+            li
+              a(href='/dich-vu#gia-cong') Gia công phát triển phần mềm
+            li
+              a(href='/dich-vu#tu-van') Dịch vụ tư vấn triển khai giải pháp phần mềm
+          ul
+            li
+              h4 Khách hàng
+            li
+              a(href='https://www.mbs.com.vn') Chứng khoán MB
+            li
+              a(href='http://agriseco.com.vn') Chứng khoán Nông Nghiệp
+            li
+              a(href='https://www.vndirect.com.vn') Chứng khoán VNDirect
+            li
+              a(href='https://www.ocs.com.vn') Chứng khoán OCEAN
+            li
+              a(href='http://www.atsc.com.vn') Chứng khoán An Thành
+            li
+              a(href='http://www.chungkhoananphat.vn') Chứng khoán An Phát
+            li
+              a(href='http://www.msbs.com.vn') Chứng khoán Maritime Bank
+            li
+              a(href='http://www.nvs.vn') Chứng khoán NAVIBANK
+          ul.endfooter
+            li
+              h4 Lãnh đạo
+            li
+              a(href='/lanh-dao#vu-viet-anh') Vũ Việt Anh
+            li
+              a(href='/lanh-dao#nguyen-quoc-thang') Nguyễn Quốc Thắng
+            li
+              a(href='/lanh-dao#nguyen-thai-ha') Nguyễn Thái Hà
+          .clear
+        .footer-bottom
+          p
+            | © Copyright 2015. 
+            a(href='www.octech.com.vn') www.octech.com.vn
